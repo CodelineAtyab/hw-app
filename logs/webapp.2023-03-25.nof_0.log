@@ -1,0 +1,4 @@
+2023-03-25 15:41:47.577 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2d3h43m35s857ms239µs600ns).
+2023-03-25 15:42:31.517 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-25 15:42:31.529 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-25 15:42:31.534 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

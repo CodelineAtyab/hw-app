@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #000000;
+    }
+    div {
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        color: #ffffff;
+    }
+
+    table {
+      margin: auto;
+      border-collapse: collapse;
+    }
+
+    button {
+        width: 100%;
+        height: 100%;
+        color: #000000;
+        background-color: #cf6814;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .cell {
+      border: 10px solid rgb(114, 186, 24);
+      color: white;
+      width: 120px;
+      height: 120px;
+      text-align: center;
+      font-size: 100px;
+    }
+
+    .status-title-cell {
+      border: 10px solid rgb(114, 186, 24);
+      color: white;
+      width: 500px;
+      height: 50px;
+      text-align: center;
+      font-size: 20px;
+    }
+    
+    .status-cell {
+      border: 10px solid rgb(114, 186, 24);
+      color: white;
+      width: 300px;
+      height: 80px;
+      text-align: center;
+      font-size: 50px;
+    }
+
+  </style>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td id="cell-1" class="cell"></td>
+                <td id="cell-2" class="cell"></td>
+                <td id="cell-3" class="cell"></td>
+            </tr>
+            <tr>
+                <td id="cell-4" class="cell"></td>
+                <td id="cell-5" class="cell"></td>
+                <td id="cell-6" class="cell"></td>
+            </tr>
+            <tr>
+                <td id="cell-7" class="cell"></td>
+                <td id="cell-8" class="cell"></td>
+                <td id="cell-9" class="cell"></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td id="cell-1" class="status-title-cell">Current Move</td>
+                <td id="cell-2" class="status-title-cell">Reset</td>
+                <td id="cell-3" class="status-title-cell">Winner</td>
+            </tr>
+            <tr>
+                <td id="moveStatus" class="status-cell"></td>
+                <td id="reset" class="status-cell"><button>Reset</button></td>
+                <td id="gameStatus" class="status-cell"></td>
+            </tr>
+            
+        </table>
+    </div>
+
+    <!-- Javascript Section-->
+    <script>
+        let foundAWinner = false;
+
+        var cells = document.querySelectorAll('.cell');
+        var currentPlayer = "X";
+        var winningCombinations = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+
+        // Update player move status
+        document.getElementById("moveStatus").innerHTML = currentPlayer;
+
+        for (var i = 0; i < cells.length; i++) {
+            cells[i].addEventListener('click', function(e) {
+                if (e.target.textContent === "" && foundAWinner != true) {
+                    e.target.textContent = currentPlayer;
+                    // document.getElementById("gameStatus").innerHTML = checkForWin();
+                    foundAWinner = checkForWin();
+                    if(foundAWinner){
+                        document.getElementById("gameStatus").innerHTML = "Player " + currentPlayer;
+                    }
+                    if (currentPlayer === "X") {
+                        currentPlayer = "O";
+                    } else {
+                        currentPlayer = "X";
+                    }
+                    document.getElementById("moveStatus").innerHTML = currentPlayer;
+                }
+            });
+        }
+
+        function checkForWin() {
+            for (var i = 0; i < winningCombinations.length; i++) {
+                var combination = winningCombinations[i];
+                if (cells[combination[0]].textContent === currentPlayer && 
+                    cells[combination[1]].textContent === currentPlayer && 
+                    cells[combination[2]].textContent === currentPlayer) {
+
+                    cells[combination[0]].style.backgroundColor = "#342e2e";
+                    cells[combination[1]].style.backgroundColor = "#342e2e";
+                    cells[combination[2]].style.backgroundColor = "#342e2e";
+
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function clearBoard() {
+            cells.forEach((currCell) => {
+                currCell.textContent = "";
+                currCell.style.backgroundColor = "black";
+            });
+        }
+
+        let resetButton = document.getElementById("reset");
+        resetButton.addEventListener('mousedown', (event) => {
+            clearBoard();
+            foundAWinner = false;
+            document.getElementById("gameStatus").innerHTML = "";
+            event.target.style.backgroundColor = "red";
+        });
+
+        resetButton.addEventListener('mouseup', (event) => {
+            event.target.style.backgroundColor = "#cf6814";
+        });
+    </script>
+  </body>
+</html>

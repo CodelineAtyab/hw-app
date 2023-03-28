@@ -1,0 +1,1320 @@
+2023-03-22 09:19:52.435 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 10608 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 09:19:52.455 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 09:19:55.822 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 09:19:56.503 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 620 ms. Found 1 JPA repository interfaces.
+2023-03-22 09:19:58.950 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 09:19:58.997 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 09:19:59.000 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 09:19:59.001 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 09:19:59.430 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 09:19:59.431 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6671 ms
+2023-03-22 09:19:59.624 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 09:19:59.625 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 09:20:00.446 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 09:20:00.594 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 09:20:00.900 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 09:20:01.253 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 09:20:02.530 ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.dynamicdoers.hwapp.HwAppApplication.main(HwAppApplication.java:15)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1429)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814)
+	... 47 common frames omitted
+2023-03-22 09:20:02.535 WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.dynamicdoers.hwapp.HwAppApplication.main(HwAppApplication.java:15)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1429)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814)
+	... 47 common frames omitted
+2023-03-22 09:20:02.596 WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.0.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-03-22 09:20:02.616 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 09:20:03.631 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 09:20:04.648 ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.dynamicdoers.hwapp.HwAppApplication.main(HwAppApplication.java:15)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1429)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814)
+	... 51 common frames omitted
+2023-03-22 09:20:04.659 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2023-03-22 09:20:04.661 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Public Key Retrieval is not allowed
+2023-03-22 09:20:04.666 ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2023-03-22 09:20:04.668 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2023-03-22 09:20:04.676 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-03-22 09:20:04.695 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-03-22 09:20:04.735 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1752)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.dynamicdoers.hwapp.HwAppApplication.main(HwAppApplication.java:15)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:49)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:68)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41)
+	... 38 common frames omitted
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1429)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814)
+	... 51 common frames omitted
+2023-03-22 09:20:39.052 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 15508 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 09:20:39.055 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 09:20:39.866 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 09:20:39.992 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interfaces.
+2023-03-22 09:20:40.648 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 09:20:40.658 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 09:20:40.659 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 09:20:40.659 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 09:20:40.768 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 09:20:40.768 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1657 ms
+2023-03-22 09:20:40.834 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 09:20:40.835 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 09:20:40.988 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 09:20:41.032 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 09:20:41.171 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 09:20:41.335 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 09:20:42.477 ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.dynamicdoers.hwapp.HwAppApplication.main(HwAppApplication.java:15)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1429)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814)
+	... 47 common frames omitted
+2023-03-22 09:20:42.479 WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:177)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1348)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1419)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.dynamicdoers.hwapp.HwAppApplication.main(HwAppApplication.java:15)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1429)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814)
+	... 47 common frames omitted
+2023-03-22 09:20:42.496 WARN  org.hibernate.dialect.Dialect - HHH000511: The 5.0.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 5.7.0. Check the community dialects project for available legacy versions.
+2023-03-22 09:20:42.497 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 09:20:43.081 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 09:20:44.095 ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.dynamicdoers.hwapp.HwAppApplication.main(HwAppApplication.java:15)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1429)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814)
+	... 51 common frames omitted
+2023-03-22 09:20:44.101 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08001
+2023-03-22 09:20:44.101 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Public Key Retrieval is not allowed
+2023-03-22 09:20:44.104 ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2023-03-22 09:20:44.105 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+2023-03-22 09:20:44.108 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-03-22 09:20:44.119 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-03-22 09:20:44.134 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1752)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1132)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:907)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:732)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:310)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.dynamicdoers.hwapp.HwAppApplication.main(HwAppApplication.java:15)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1798)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1748)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.JDBCConnectionException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:49)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:109)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:95)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:68)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:71)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:225)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:126)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1421)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:336)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Public Key Retrieval is not allowed
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:824)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:444)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:284)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:41)
+	... 38 common frames omitted
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Public Key Retrieval is not allowed
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	at com.mysql.cj.protocol.a.authentication.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.proceedHandshakeWithPluggableAuthentication(NativeAuthenticationProvider.java:447)
+	at com.mysql.cj.protocol.a.NativeAuthenticationProvider.connect(NativeAuthenticationProvider.java:212)
+	at com.mysql.cj.protocol.a.NativeProtocol.connect(NativeProtocol.java:1429)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:133)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:944)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:814)
+	... 51 common frames omitted
+2023-03-22 09:24:04.725 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 12676 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 09:24:04.728 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 09:24:05.498 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 09:24:05.627 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116 ms. Found 1 JPA repository interfaces.
+2023-03-22 09:24:06.280 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 09:24:06.291 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 09:24:06.292 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 09:24:06.292 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 09:24:06.387 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 09:24:06.387 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1621 ms
+2023-03-22 09:24:06.455 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 09:24:06.455 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 09:24:06.638 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 09:24:06.698 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 09:24:06.813 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 09:24:06.946 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 09:24:07.105 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d07aacc
+2023-03-22 09:24:07.107 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 09:24:07.166 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 09:24:07.819 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 09:24:07.826 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 09:24:08.156 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 09:24:08.273 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e84af34, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@218e186b, org.springframework.security.web.context.SecurityContextHolderFilter@68fc1e7f, org.springframework.security.web.header.HeaderWriterFilter@5dc7881d, org.springframework.security.web.authentication.logout.LogoutFilter@62f73b0c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@28befd62, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@496e0f9d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40ebb56, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12925d2, org.springframework.security.web.access.ExceptionTranslationFilter@1aebe759, org.springframework.security.web.access.intercept.AuthorizationFilter@64de9fa4]
+2023-03-22 09:24:08.394 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 09:24:08.422 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 09:24:08.472 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2023-03-22 09:24:09.273 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 09:24:09.280 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 09:24:09.484 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 09:24:09.528 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 09:24:09.550 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 5.136 seconds (process running for 5.82)
+2023-03-22 09:24:09.770 DEBUG o.s.w.r.f.client.ExchangeFunctions - [672549f3] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 09:24:10.472 DEBUG org.springframework.web.HttpLogging - [672549f3] Encoding [{text=Application started at: 2023-03-22 09:24:09}]
+2023-03-22 09:24:10.792 DEBUG o.s.w.r.f.client.ExchangeFunctions - [672549f3] [2d1906dd-1] Response 200 OK
+2023-03-22 09:37:42.637 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 09:37:42.641 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 09:37:42.652 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 09:40:24.014 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 16956 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 09:40:24.018 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 09:40:24.980 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 09:40:25.107 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interfaces.
+2023-03-22 09:40:25.704 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 09:40:25.712 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 09:40:25.713 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 09:40:25.713 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 09:40:25.791 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 09:40:25.792 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1716 ms
+2023-03-22 09:40:25.842 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 09:40:25.842 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 09:40:25.947 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 09:40:26.001 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 09:40:26.135 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 09:40:26.274 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 09:40:26.405 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6851b296
+2023-03-22 09:40:26.407 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 09:40:26.445 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 09:40:26.990 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 09:40:26.997 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 09:40:27.363 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 09:40:27.504 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5f7bd970, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6406b84d, org.springframework.security.web.context.SecurityContextHolderFilter@17b387ef, org.springframework.security.web.header.HeaderWriterFilter@360d3f47, org.springframework.security.web.authentication.logout.LogoutFilter@1239c268, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@15a5cc6e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4028aab2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2af31aba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5274acd1, org.springframework.security.web.access.ExceptionTranslationFilter@7c3ae369, org.springframework.security.web.access.intercept.AuthorizationFilter@513bec8c]
+2023-03-22 09:40:27.621 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 09:40:27.649 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 09:40:27.704 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 21 mappings in 'requestMappingHandlerMapping'
+2023-03-22 09:40:28.423 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 09:40:28.432 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 09:40:28.706 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 09:40:28.733 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 09:40:28.743 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 5.118 seconds (process running for 5.861)
+2023-03-22 09:40:28.941 DEBUG o.s.w.r.f.client.ExchangeFunctions - [15ab0461] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 09:40:29.620 DEBUG org.springframework.web.HttpLogging - [15ab0461] Encoding [{text=Application started at: 2023-03-22 09:40:28}]
+2023-03-22 09:40:29.938 DEBUG o.s.w.r.f.client.ExchangeFunctions - [15ab0461] [6f6ee0b8-1] Response 200 OK
+2023-03-22 09:42:40.290 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 09:42:40.291 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 09:42:40.291 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-22 09:42:40.291 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-22 09:42:40.292 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-22 09:42:40.293 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7866fe3e
+2023-03-22 09:42:40.293 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@22a2e581
+2023-03-22 09:42:40.293 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-22 09:42:40.294 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-03-22 09:42:40.464 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/students", parameters={}
+2023-03-22 09:42:40.471 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 09:42:40.618 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 09:42:40.619 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.dynamicdoers.hwapp.model.Student@404ea0d5, com.dynamicdoers.hwapp.model.Student@6139890f]]
+2023-03-22 09:42:40.640 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 09:43:28.842 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students/handleForm", parameters={masked}
+2023-03-22 09:43:28.843 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudentFromForm(String, String)
+2023-03-22 09:43:28.899 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 09:43:28.899 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.dynamicdoers.hwapp.model.Student@189fc09f]
+2023-03-22 09:43:28.901 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 09:43:33.618 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students", parameters={masked}
+2023-03-22 09:43:33.619 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 09:43:33.624 DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public com.dynamicdoers.hwapp.model.Student com.dynamicdoers.hwapp.controller.StudentController.createStudent(com.dynamicdoers.hwapp.model.Student): Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported
+2023-03-22 09:43:33.626 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported]
+2023-03-22 09:43:33.626 DEBUG o.s.web.servlet.DispatcherServlet - Completed 415 UNSUPPORTED_MEDIA_TYPE
+2023-03-22 09:43:33.630 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={masked}
+2023-03-22 09:43:33.631 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-03-22 09:43:33.635 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 09:43:33.636 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Wed Mar 22 09:43:33 GST 2023, status=415, error=Unsupported Media Type, path=/api/student (truncated)...]
+2023-03-22 09:43:33.642 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 415
+2023-03-22 09:43:41.351 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/students", parameters={}
+2023-03-22 09:43:41.351 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 09:43:41.355 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 09:43:41.355 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.dynamicdoers.hwapp.model.Student@4e933c87, com.dynamicdoers.hwapp.model.Student@65ba2db6, com.d (truncated)...]
+2023-03-22 09:43:41.356 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 09:49:30.891 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students/handleForm", parameters={masked}
+2023-03-22 09:49:30.892 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudentFromForm(String, String)
+2023-03-22 09:49:30.900 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2023-03-22 09:49:30.900 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.dynamicdoers.hwapp.model.Student@10f2b7ad]
+2023-03-22 09:49:30.901 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 09:49:31.097 DEBUG o.s.web.servlet.DispatcherServlet - GET "/favicon.ico", parameters={}
+2023-03-22 09:49:31.100 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-03-22 09:49:31.103 DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2023-03-22 09:49:31.103 DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2023-03-22 09:49:31.104 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2023-03-22 09:49:31.104 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2023-03-22 09:49:31.105 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json;q=0.8', given [image/avif, image/webp, image/apng, image/svg+xml, image/*, */*;q=0.8] and supported [application/json, application/*+json]
+2023-03-22 09:49:31.105 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Wed Mar 22 09:49:31 GST 2023, status=404, error=Not Found, path=/favicon.ico}]
+2023-03-22 09:49:31.108 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2023-03-22 09:49:37.940 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students/handleForm", parameters={masked}
+2023-03-22 09:49:37.941 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudentFromForm(String, String)
+2023-03-22 09:49:37.959 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2023-03-22 09:49:37.959 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.dynamicdoers.hwapp.model.Student@18a6a2ad]
+2023-03-22 09:49:37.960 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 10:27:12.340 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 10:27:12.348 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 10:27:12.352 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 10:28:29.235 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 18876 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 10:28:29.238 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 10:28:30.036 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 10:28:30.166 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interfaces.
+2023-03-22 10:28:30.831 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 10:28:30.838 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 10:28:30.839 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 10:28:30.839 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 10:28:30.926 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 10:28:30.926 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1638 ms
+2023-03-22 10:28:30.970 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 10:28:30.970 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 10:28:31.082 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 10:28:31.131 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 10:28:31.265 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 10:28:31.399 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 10:28:31.529 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4db728df
+2023-03-22 10:28:31.531 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 10:28:31.573 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 10:28:32.168 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 10:28:32.176 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 10:28:32.570 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 10:28:32.713 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 10:28:32.766 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 21 mappings in 'requestMappingHandlerMapping'
+2023-03-22 10:28:33.494 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 10:28:33.498 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2fafa9bf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53fd59d4, org.springframework.security.web.context.SecurityContextHolderFilter@1f24e33d, org.springframework.security.web.header.HeaderWriterFilter@7f839ec5, org.springframework.web.filter.CorsFilter@43c3354, org.springframework.security.web.authentication.logout.LogoutFilter@3a83cfbc, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7fb46c10, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7683d632, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@513bec8c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@260fffec, org.springframework.security.web.access.ExceptionTranslationFilter@4bec6682, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4280b20b]
+2023-03-22 10:28:33.597 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 10:28:33.634 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 10:28:33.828 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 10:28:33.848 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 10:28:33.857 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 4.941 seconds (process running for 5.611)
+2023-03-22 10:28:34.077 DEBUG o.s.w.r.f.client.ExchangeFunctions - [cbd3871] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 10:28:46.580 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 10:28:46.581 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 10:28:46.581 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-22 10:28:46.581 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-22 10:28:46.581 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-22 10:28:46.582 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@247415be
+2023-03-22 10:28:46.582 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4cf1bd4a
+2023-03-22 10:28:46.583 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-22 10:28:46.583 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-03-22 10:28:46.603 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:28:46.610 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:28:46.762 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students", parameters={}
+2023-03-22 10:28:46.764 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:28:46.825 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.dynamicdoers.hwapp.model.Student@35650ae9]
+2023-03-22 10:28:46.888 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 10:28:46.888 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.dynamicdoers.hwapp.model.Student@35650ae9]
+2023-03-22 10:28:46.888 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 10:28:50.763 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:28:50.767 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:28:50.830 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students", parameters={}
+2023-03-22 10:28:50.831 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:28:50.832 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.dynamicdoers.hwapp.model.Student@51641a2d]
+2023-03-22 10:28:50.843 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 10:28:50.843 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.dynamicdoers.hwapp.model.Student@51641a2d]
+2023-03-22 10:28:50.843 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 10:28:56.419 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 10:28:56.482 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/students", parameters={}
+2023-03-22 10:28:56.482 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 10:28:56.577 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 10:28:56.577 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.dynamicdoers.hwapp.model.Student@35ccbf04, com.dynamicdoers.hwapp.model.Student@4a539fdf, com.d (truncated)...]
+2023-03-22 10:28:56.577 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 10:36:35.308 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 10:36:35.312 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 10:36:35.323 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 10:53:00.379 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 18804 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 10:53:00.383 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 10:53:01.295 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 10:53:01.467 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 163 ms. Found 1 JPA repository interfaces.
+2023-03-22 10:53:02.201 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 10:53:02.216 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 10:53:02.216 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 10:53:02.217 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 10:53:02.334 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 10:53:02.335 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1896 ms
+2023-03-22 10:53:02.398 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 10:53:02.399 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 10:53:02.620 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 10:53:02.694 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 10:53:02.870 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 10:53:03.054 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 10:53:03.203 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5613247e
+2023-03-22 10:53:03.208 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 10:53:03.251 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 10:53:03.935 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 10:53:03.945 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 10:53:04.363 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 10:53:04.529 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 10:53:04.602 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2023-03-22 10:53:05.554 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 10:53:05.560 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@39a03ccc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4db45d, org.springframework.security.web.context.SecurityContextHolderFilter@57fae911, org.springframework.security.web.header.HeaderWriterFilter@705eb026, org.springframework.web.filter.CorsFilter@89178b4, org.springframework.security.web.authentication.logout.LogoutFilter@4a65c40, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4806fbf7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28941a68, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24ce5d4c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5c7d675c, org.springframework.security.web.access.ExceptionTranslationFilter@24e79a4d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66f223fa]
+2023-03-22 10:53:05.642 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 10:53:05.682 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 10:53:05.974 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 10:53:06.011 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 10:53:06.033 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 6.037 seconds (process running for 6.786)
+2023-03-22 10:53:06.279 DEBUG o.s.w.r.f.client.ExchangeFunctions - [e98004e] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 10:53:07.229 DEBUG org.springframework.web.HttpLogging - [e98004e] Encoding [{text=Application started at: 2023-03-22 10:53:06}]
+2023-03-22 10:53:07.577 DEBUG o.s.w.r.f.client.ExchangeFunctions - [e98004e] [5c8d9b82-1] Response 200 OK
+2023-03-22 10:53:24.837 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 10:53:24.837 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 10:53:24.838 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-22 10:53:24.838 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-22 10:53:24.838 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-22 10:53:24.839 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@54e3cba2
+2023-03-22 10:53:24.840 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@60317de8
+2023-03-22 10:53:24.840 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-22 10:53:24.840 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-03-22 10:53:24.885 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 10:53:25.191 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/students", parameters={}
+2023-03-22 10:53:25.194 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 10:53:25.500 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 10:53:25.501 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.dynamicdoers.hwapp.model.Student@7b1c981a, com.dynamicdoers.hwapp.model.Student@703a8cfd, com.d (truncated)...]
+2023-03-22 10:53:25.545 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 10:54:25.456 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:54:25.532 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students", parameters={masked}
+2023-03-22 10:54:25.532 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:54:25.538 DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public com.dynamicdoers.hwapp.model.Student com.dynamicdoers.hwapp.controller.StudentController.createStudent(com.dynamicdoers.hwapp.model.Student): Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported
+2023-03-22 10:54:25.540 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported]
+2023-03-22 10:54:25.540 DEBUG o.s.web.servlet.DispatcherServlet - Completed 415 UNSUPPORTED_MEDIA_TYPE
+2023-03-22 10:54:25.546 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={masked}
+2023-03-22 10:54:25.548 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2023-03-22 10:54:25.568 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+2023-03-22 10:54:25.576 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 415
+2023-03-22 10:55:45.615 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:55:45.688 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students", parameters={masked}
+2023-03-22 10:55:45.689 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 10:55:45.690 DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public com.dynamicdoers.hwapp.model.Student com.dynamicdoers.hwapp.controller.StudentController.createStudent(com.dynamicdoers.hwapp.model.Student): Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported
+2023-03-22 10:55:45.691 WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported]
+2023-03-22 10:55:45.691 DEBUG o.s.web.servlet.DispatcherServlet - Completed 415 UNSUPPORTED_MEDIA_TYPE
+2023-03-22 10:55:45.692 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={masked}
+2023-03-22 10:55:45.694 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2023-03-22 10:55:45.698 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+2023-03-22 10:55:45.699 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 415
+2023-03-22 10:56:08.287 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 10:56:08.288 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 10:56:08.299 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 11:00:35.646 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 6896 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 11:00:35.650 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 11:00:36.486 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 11:00:36.627 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 132 ms. Found 1 JPA repository interfaces.
+2023-03-22 11:00:37.611 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 11:00:37.622 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 11:00:37.624 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 11:00:37.624 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 11:00:37.747 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 11:00:37.747 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2048 ms
+2023-03-22 11:00:37.845 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 11:00:37.846 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 11:00:38.072 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 11:00:38.155 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 11:00:38.345 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 11:00:38.536 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 11:00:38.750 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d07aacc
+2023-03-22 11:00:38.754 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 11:00:38.828 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 11:00:39.595 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 11:00:39.610 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 11:00:40.146 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 11:00:40.404 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 11:00:40.511 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 21 mappings in 'requestMappingHandlerMapping'
+2023-03-22 11:00:41.665 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 11:00:41.671 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66e62e19, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50fe5df2, org.springframework.security.web.context.SecurityContextHolderFilter@23f539df, org.springframework.security.web.header.HeaderWriterFilter@4bec6682, org.springframework.web.filter.CorsFilter@2fafa9bf, org.springframework.security.web.authentication.logout.LogoutFilter@12925d2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3f31892e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f24e33d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c3223aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53fd59d4, org.springframework.security.web.access.ExceptionTranslationFilter@118879d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@32153bbe]
+2023-03-22 11:00:41.751 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 11:00:41.795 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 11:00:42.041 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 11:00:42.066 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 11:00:42.076 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 6.794 seconds (process running for 7.546)
+2023-03-22 11:00:42.348 DEBUG o.s.w.r.f.client.ExchangeFunctions - [68a1bb31] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 11:00:43.154 DEBUG org.springframework.web.HttpLogging - [68a1bb31] Encoding [{text=Application started at: 2023-03-22 11:00:42}]
+2023-03-22 11:00:43.462 DEBUG o.s.w.r.f.client.ExchangeFunctions - [68a1bb31] [6cd77911-1] Response 200 OK
+2023-03-22 11:00:46.781 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 11:00:46.782 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 11:00:46.784 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-22 11:00:46.784 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-22 11:00:46.785 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-22 11:00:46.786 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@25c98637
+2023-03-22 11:00:46.787 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5fee3c9c
+2023-03-22 11:00:46.787 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-22 11:00:46.787 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-03-22 11:00:46.813 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudentFromForm(String, String)
+2023-03-22 11:00:46.990 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students/handleForm", parameters={masked}
+2023-03-22 11:00:46.994 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudentFromForm(String, String)
+2023-03-22 11:00:47.110 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 11:00:47.111 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.dynamicdoers.hwapp.model.Student@7b7b4c3e]
+2023-03-22 11:00:47.123 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 11:00:59.634 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 11:00:59.712 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/students", parameters={masked}
+2023-03-22 11:00:59.713 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 11:00:59.887 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 11:00:59.888 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.dynamicdoers.hwapp.model.Student@35ccbf04, com.dynamicdoers.hwapp.model.Student@4a539fdf, com.d (truncated)...]
+2023-03-22 11:00:59.890 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 11:01:41.058 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudentFromForm(String, String)
+2023-03-22 11:01:41.140 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students/handleForm", parameters={masked}
+2023-03-22 11:01:41.140 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudentFromForm(String, String)
+2023-03-22 11:01:41.148 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2023-03-22 11:01:41.148 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.dynamicdoers.hwapp.model.Student@c605ab7]
+2023-03-22 11:01:41.149 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 11:02:02.630 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 11:02:02.703 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/students", parameters={masked}
+2023-03-22 11:02:02.703 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 11:02:02.709 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 11:02:02.709 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.dynamicdoers.hwapp.model.Student@5da764d1, com.dynamicdoers.hwapp.model.Student@2e845bd, com.dy (truncated)...]
+2023-03-22 11:02:02.710 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 11:03:30.848 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 11:03:30.852 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 11:03:30.866 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 11:25:01.133 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 9880 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 11:25:01.137 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 11:25:02.181 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 11:25:02.408 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 210 ms. Found 1 JPA repository interfaces.
+2023-03-22 11:25:03.406 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 11:25:03.418 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 11:25:03.420 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 11:25:03.420 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 11:25:03.568 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 11:25:03.568 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2361 ms
+2023-03-22 11:25:03.649 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 11:25:03.649 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 11:25:03.877 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 11:25:03.988 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 11:25:04.206 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 11:25:04.451 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 11:25:04.699 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@586737ff
+2023-03-22 11:25:04.702 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 11:25:04.763 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 11:25:05.763 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 11:25:05.774 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 11:25:06.322 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 11:25:06.603 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 11:25:06.704 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2023-03-22 11:25:08.211 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 11:25:08.219 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@45a05350, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d6a9d5e, org.springframework.security.web.context.SecurityContextHolderFilter@576a8b00, org.springframework.security.web.header.HeaderWriterFilter@7ba623d1, org.springframework.web.filter.CorsFilter@74ed7111, org.springframework.security.web.authentication.logout.LogoutFilter@9863ed5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@8113ea7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@116efe65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@118879d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74691677, org.springframework.security.web.access.ExceptionTranslationFilter@24fc9aa5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6500e886]
+2023-03-22 11:25:08.458 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 11:25:08.554 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 11:25:09.183 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 11:25:09.224 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 11:25:09.250 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 8.622 seconds (process running for 9.383)
+2023-03-22 11:25:09.591 DEBUG o.s.w.r.f.client.ExchangeFunctions - [3c20abd6] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 11:25:10.438 DEBUG org.springframework.web.HttpLogging - [3c20abd6] Encoding [{text=Application started at: 2023-03-22 11:25:09}]
+2023-03-22 11:25:10.756 DEBUG o.s.w.r.f.client.ExchangeFunctions - [3c20abd6] [62712381-1] Response 200 OK
+2023-03-22 11:25:12.224 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 11:25:12.226 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 11:25:12.226 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-22 11:25:12.226 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-22 11:25:12.227 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-22 11:25:12.228 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@d62feaf
+2023-03-22 11:25:12.231 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1a59500b
+2023-03-22 11:25:12.231 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-22 11:25:12.231 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2023-03-22 11:25:12.251 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 11:25:12.261 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 11:25:12.515 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students", parameters={}
+2023-03-22 11:25:12.521 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 11:25:12.606 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.dynamicdoers.hwapp.model.Student@4176762]
+2023-03-22 11:25:12.687 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 11:25:12.687 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.dynamicdoers.hwapp.model.Student@4176762]
+2023-03-22 11:25:12.692 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 11:25:20.844 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 11:25:20.926 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/students", parameters={masked}
+2023-03-22 11:25:20.927 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 11:25:21.115 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 11:25:21.116 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.dynamicdoers.hwapp.model.Student@252bf991, com.dynamicdoers.hwapp.model.Student@2e9528f8, com.d (truncated)...]
+2023-03-22 11:25:21.118 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 11:26:24.560 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 11:26:24.565 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 11:26:24.631 DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/students", parameters={}
+2023-03-22 11:26:24.631 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#createStudent(Student)
+2023-03-22 11:26:24.632 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.dynamicdoers.hwapp.model.Student@1438094e]
+2023-03-22 11:26:24.637 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2023-03-22 11:26:24.638 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [com.dynamicdoers.hwapp.model.Student@1438094e]
+2023-03-22 11:26:24.639 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 13:51:01.143 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 13:51:01.151 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 13:51:01.151 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 13:51:56.458 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 13316 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 13:51:56.461 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 13:51:57.667 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 13:51:57.810 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interfaces.
+2023-03-22 13:51:58.514 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 13:51:58.526 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 13:51:58.527 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 13:51:58.527 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 13:51:58.651 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 13:51:58.651 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2138 ms
+2023-03-22 13:51:58.832 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 13:51:58.836 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'serverHttpObservationFilter' configured for use
+2023-03-22 13:51:58.838 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 13:51:58.987 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 13:51:59.046 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 13:51:59.202 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 13:51:59.389 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 13:51:59.576 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f75a9b1
+2023-03-22 13:51:59.579 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 13:51:59.630 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 13:52:00.251 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 13:52:00.258 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 13:52:00.634 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 13:52:00.772 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 13:52:00.826 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2023-03-22 13:52:01.733 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 13:52:01.848 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/api/actuator'
+2023-03-22 13:52:01.864 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4a49ce3a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@518ed9b4, org.springframework.security.web.context.SecurityContextHolderFilter@28d1b2f, org.springframework.security.web.header.HeaderWriterFilter@1e987f59, org.springframework.web.filter.CorsFilter@20e73e41, org.springframework.security.web.authentication.logout.LogoutFilter@75aeec0a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6d96a895, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1181526e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5134a7d6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@694dc99b, org.springframework.security.web.access.ExceptionTranslationFilter@68a7f77a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53945f9c]
+2023-03-22 13:52:01.981 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 13:52:02.019 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 13:52:02.435 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 13:52:02.464 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 13:52:02.487 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 6.359 seconds (process running for 6.991)
+2023-03-22 13:52:02.774 DEBUG o.s.w.r.f.client.ExchangeFunctions - [3670af2b] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 13:52:03.534 DEBUG org.springframework.web.HttpLogging - [3670af2b] Encoding [{text=Application started at: 2023-03-22 13:52:02}]
+2023-03-22 13:52:03.846 DEBUG o.s.w.r.f.client.ExchangeFunctions - [3670af2b] [1f51567e-1] Response 200 OK
+2023-03-22 13:52:13.138 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 13:52:13.138 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 13:52:13.138 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-22 13:52:13.138 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-22 13:52:13.138 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-22 13:52:13.139 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5924ea91
+2023-03-22 13:52:13.139 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@20bf7206
+2023-03-22 13:52:13.139 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-22 13:52:13.139 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-03-22 13:52:13.178 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 13:52:13.350 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/students", parameters={}
+2023-03-22 13:52:13.352 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.dynamicdoers.hwapp.controller.StudentController#getStudents()
+2023-03-22 13:52:13.532 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/json, application/*+json]
+2023-03-22 13:52:13.532 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [[com.dynamicdoers.hwapp.model.Student@76a95c93, com.dynamicdoers.hwapp.model.Student@2207888d, com.d (truncated)...]
+2023-03-22 13:52:13.569 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 13:52:20.657 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 13:52:20.681 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 13:52:20.691 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@411d08d8]
+2023-03-22 13:52:20.695 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 13:52:24.631 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-03-22 13:52:24.694 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/info", parameters={}
+2023-03-22 13:52:24.695 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2023-03-22 13:52:24.702 DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2023-03-22 13:52:24.702 DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2023-03-22 13:52:24.707 DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2023-03-22 13:52:24.709 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2023-03-22 13:52:24.723 DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+2023-03-22 13:52:24.729 DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2023-03-22 13:52:49.380 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 13:52:49.385 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 13:52:49.385 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@556105bd]
+2023-03-22 13:52:49.386 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 13:52:50.976 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 13:52:50.980 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 13:52:50.980 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@59e40878]
+2023-03-22 13:52:50.981 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 13:52:51.589 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 13:52:51.592 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 13:52:51.593 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@672378c2]
+2023-03-22 13:52:51.593 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 13:53:19.138 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 13:53:19.140 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 13:53:19.147 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 13:53:21.349 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 1072 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 13:53:21.352 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 13:53:22.513 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 13:53:22.643 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interfaces.
+2023-03-22 13:53:23.265 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 13:53:23.275 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 13:53:23.276 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 13:53:23.276 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 13:53:23.380 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 13:53:23.380 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1986 ms
+2023-03-22 13:53:23.574 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 13:53:23.577 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'serverHttpObservationFilter' configured for use
+2023-03-22 13:53:23.577 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 13:53:23.724 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 13:53:23.791 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 13:53:23.911 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 13:53:24.042 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 13:53:24.195 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42d0e41
+2023-03-22 13:53:24.198 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 13:53:24.237 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 13:53:24.814 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 13:53:24.821 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 13:53:25.194 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 13:53:25.335 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 13:53:25.382 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2023-03-22 13:53:26.120 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 13:53:26.229 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/api/actuator'
+2023-03-22 13:53:26.242 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b0d9da, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ac35b17, org.springframework.security.web.context.SecurityContextHolderFilter@6fc1a1d5, org.springframework.security.web.header.HeaderWriterFilter@2530baf6, org.springframework.web.filter.CorsFilter@6eaf6ced, org.springframework.security.web.authentication.logout.LogoutFilter@620e0d36, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5cef5fc9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d6ddeb5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e574f9c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f8035d6, org.springframework.security.web.access.ExceptionTranslationFilter@81a56b2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d514259]
+2023-03-22 13:53:26.311 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 13:53:26.351 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 13:53:26.658 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 13:53:26.679 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 13:53:26.693 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 5.664 seconds (process running for 6.268)
+2023-03-22 13:53:26.961 DEBUG o.s.w.r.f.client.ExchangeFunctions - [40a360e6] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 13:53:27.681 DEBUG org.springframework.web.HttpLogging - [40a360e6] Encoding [{text=Application started at: 2023-03-22 13:53:26}]
+2023-03-22 13:53:27.988 DEBUG o.s.w.r.f.client.ExchangeFunctions - [40a360e6] [c7820b87-1] Response 200 OK
+2023-03-22 13:53:44.232 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 13:53:44.233 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 13:53:44.233 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-22 13:53:44.233 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-22 13:53:44.233 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-22 13:53:44.234 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@40aaf656
+2023-03-22 13:53:44.234 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5603632c
+2023-03-22 13:53:44.235 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-22 13:53:44.235 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-03-22 13:53:44.427 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 13:53:44.471 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 13:53:44.509 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@4441a390]
+2023-03-22 13:53:44.520 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 13:53:46.522 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/info", parameters={}
+2023-03-22 13:53:46.526 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 13:53:46.527 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{}]
+2023-03-22 13:53:46.529 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 13:53:50.163 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/env", parameters={}
+2023-03-22 13:53:50.172 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 13:53:50.173 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [org.springframework.boot.actuate.env.EnvironmentEndpoint$EnvironmentDescriptor@5580fc25]
+2023-03-22 13:53:50.178 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 14:34:14.693 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 14:34:14.697 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 14:34:14.701 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 14:34:17.574 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 14564 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 14:34:17.578 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 14:34:18.790 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 14:34:18.927 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interfaces.
+2023-03-22 14:34:19.579 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 14:34:19.590 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 14:34:19.591 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 14:34:19.592 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 14:34:19.706 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 14:34:19.706 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2079 ms
+2023-03-22 14:34:19.880 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 14:34:19.882 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'serverHttpObservationFilter' configured for use
+2023-03-22 14:34:19.883 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 14:34:20.007 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 14:34:20.092 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 14:34:20.254 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 14:34:20.415 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 14:34:20.578 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26cdd4af
+2023-03-22 14:34:20.580 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 14:34:20.626 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 14:34:21.231 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 14:34:21.240 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 14:34:21.599 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 14:34:21.738 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 14:34:21.806 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2023-03-22 14:34:22.725 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 14:34:22.864 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/api/actuator'
+2023-03-22 14:34:22.884 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1f39b3ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53b579d2, org.springframework.security.web.context.SecurityContextHolderFilter@d164938, org.springframework.security.web.header.HeaderWriterFilter@4c31b6c2, org.springframework.web.filter.CorsFilter@34f2d3a6, org.springframework.security.web.authentication.logout.LogoutFilter@e356940, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@68303aad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37823482, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@202b5293, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3da701a1, org.springframework.security.web.access.ExceptionTranslationFilter@72ad577b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28effa3f]
+2023-03-22 14:34:22.962 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 14:34:22.996 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 14:34:23.300 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 14:34:23.322 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 14:34:23.336 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 6.185 seconds (process running for 6.843)
+2023-03-22 14:34:23.597 DEBUG o.s.w.r.f.client.ExchangeFunctions - [21a14c45] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 14:34:24.456 DEBUG org.springframework.web.HttpLogging - [21a14c45] Encoding [{text=Application started at: 2023-03-22 14:34:23}]
+2023-03-22 14:34:24.779 DEBUG o.s.w.r.f.client.ExchangeFunctions - [21a14c45] [6ef21f00-1] Response 200 OK
+2023-03-22 14:34:38.919 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 14:34:38.919 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 14:34:38.920 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-22 14:34:38.921 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-22 14:34:38.921 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-22 14:34:38.922 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@752e50c6
+2023-03-22 14:34:38.922 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@307ba188
+2023-03-22 14:34:38.922 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-22 14:34:38.923 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-03-22 14:34:39.123 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 14:34:39.159 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 14:34:39.191 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@6f6382c2]
+2023-03-22 14:34:39.204 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 14:34:59.058 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 14:34:59.062 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 14:34:59.063 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@51b1d348]
+2023-03-22 14:34:59.064 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 14:35:26.633 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 14:35:26.639 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 14:35:26.640 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@36e7b32c]
+2023-03-22 14:35:26.641 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 14:35:34.451 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/info", parameters={}
+2023-03-22 14:35:34.455 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 14:35:34.457 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [{}]
+2023-03-22 14:35:34.458 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 14:36:26.058 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 14:36:26.061 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 14:36:26.062 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@3ac6b462]
+2023-03-22 14:36:26.063 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 14:52:39.315 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 14:52:39.319 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 14:52:39.320 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@f501c91]
+2023-03-22 14:52:39.321 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 14:53:14.596 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/env", parameters={}
+2023-03-22 14:53:14.602 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 14:53:14.603 DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [org.springframework.boot.actuate.env.EnvironmentEndpoint$EnvironmentDescriptor@1f42b9bb]
+2023-03-22 14:53:14.607 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 14:55:11.518 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 14:55:11.521 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 14:55:11.522 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@14dbb3e7]
+2023-03-22 14:55:11.524 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 14:55:59.614 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 14:55:59.616 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-03-22 14:55:59.631 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-03-22 14:56:01.978 INFO  c.d.hwapp.HwAppApplication - Starting HwAppApplication using Java 17.0.2 with PID 16848 (C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app\target\classes started by SyedAtyabHussain in C:\Users\SyedAtyabHussain\Documents\work_area\web_apps\hw-app\hw-app)
+2023-03-22 14:56:01.981 INFO  c.d.hwapp.HwAppApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-22 14:56:03.188 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-22 14:56:03.353 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 153 ms. Found 1 JPA repository interfaces.
+2023-03-22 14:56:04.105 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-03-22 14:56:04.114 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-22 14:56:04.115 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-03-22 14:56:04.115 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-22 14:56:04.218 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-03-22 14:56:04.219 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2184 ms
+2023-03-22 14:56:04.404 DEBUG o.s.w.s.r.ResourceUrlEncodingFilter - Filter 'resourceUrlEncodingFilter' configured for use
+2023-03-22 14:56:04.406 DEBUG o.s.w.f.ServerHttpObservationFilter - Filter 'serverHttpObservationFilter' configured for use
+2023-03-22 14:56:04.406 DEBUG o.s.web.filter.ForwardedHeaderFilter - Filter 'forwardedHeaderFilter' configured for use
+2023-03-22 14:56:04.505 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-22 14:56:04.563 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-22 14:56:04.704 WARN  org.hibernate.orm.deprecation - HHH90000021: Encountered deprecated setting [javax.persistence.validation.mode], use [jakarta.persistence.validation.mode] instead
+2023-03-22 14:56:04.855 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-03-22 14:56:05.015 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@556aed22
+2023-03-22 14:56:05.016 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-03-22 14:56:05.056 INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-22 14:56:05.637 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-22 14:56:05.644 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-22 14:56:05.984 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-22 14:56:06.118 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+2023-03-22 14:56:06.171 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2023-03-22 14:56:06.987 DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**, /api/swagger-ui*/*swagger-initializer.js, /api/swagger-ui*/**] in 'resourceHandlerMapping'
+2023-03-22 14:56:07.086 INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/api/actuator'
+2023-03-22 14:56:07.097 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3aac31b7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57def953, org.springframework.security.web.context.SecurityContextHolderFilter@4960b819, org.springframework.security.web.header.HeaderWriterFilter@4fe3199d, org.springframework.web.filter.CorsFilter@1bf4a79b, org.springframework.security.web.authentication.logout.LogoutFilter@4e312811, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@18ed9480, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@192aeae2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ee1c29a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@a1be5cb, org.springframework.security.web.access.ExceptionTranslationFilter@22e253c7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53cb9b1]
+2023-03-22 14:56:07.187 DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2023-03-22 14:56:07.238 DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2023-03-22 14:56:07.594 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-03-22 14:56:07.616 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-22 14:56:07.630 INFO  c.d.hwapp.HwAppApplication - Started HwAppApplication in 5.988 seconds (process running for 6.681)
+2023-03-22 14:56:07.865 DEBUG o.s.w.r.f.client.ExchangeFunctions - [7701b695] HTTP POST https://hooks.slack.com/services/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
+2023-03-22 14:56:08.615 DEBUG org.springframework.web.HttpLogging - [7701b695] Encoding [{text=Application started at: 2023-03-22 14:56:07}]
+2023-03-22 14:56:08.977 DEBUG o.s.w.r.f.client.ExchangeFunctions - [7701b695] [775ecb2a-1] Response 200 OK
+2023-03-22 14:56:11.756 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-22 14:56:11.756 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-03-22 14:56:11.757 DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2023-03-22 14:56:11.757 DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2023-03-22 14:56:11.757 DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2023-03-22 14:56:11.758 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@769c80d1
+2023-03-22 14:56:11.758 DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5799b8a2
+2023-03-22 14:56:11.758 DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-03-22 14:56:11.759 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-03-22 14:56:11.948 DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/actuator/health", parameters={}
+2023-03-22 14:56:11.979 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/vnd.spring-boot.actuator.v3+json;q=0.8', given [text/html, application/xhtml+xml, image/avif, image/webp, image/apng, application/xml;q=0.9, */*;q=0.8, application/signed-exchange;v=b3;q=0.7] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2023-03-22 14:56:12.012 DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [org.springframework.boot.actuate.health.SystemHealth@3b27bcb]
+2023-03-22 14:56:12.026 DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2023-03-22 15:42:51.598 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m46s455ms180µs600ns).
