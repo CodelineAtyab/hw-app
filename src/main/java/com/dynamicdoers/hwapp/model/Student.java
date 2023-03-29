@@ -15,4 +15,7 @@ public class Student {
     @Column
     public String email;
 
+    @Column
+    public String imageName;
+
 }

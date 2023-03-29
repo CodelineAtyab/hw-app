@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 public class HwAppApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ac = SpringApplication.run(HwAppApplication.class, args);
-		NotificationService.sendNotification("Application started at: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+//		NotificationService.sendNotification("Application started at: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 //		for(String name: ac.getBeanDefinitionNames()){
 //			System.out.println(name);
 //		}
