@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 import java.util.Optional;
 
@@ -52,7 +53,7 @@ public class StudentController {
 
         if(image != null){
             savedStudent.imageName = Integer.toString(savedStudent.id) + "_" + savedStudent.name + ".jpg";
-            FileUtils.writeByteArrayToFile(new File("./data/" + savedStudent.imageName), image.getBytes());
+            FileUtils.writeByteArrayToFile(new File("./src/main/resources/static/student_images/" + savedStudent.imageName), image.getBytes());
             studentService.updateStudent(savedStudent.id, savedStudent);
         }
 
