@@ -5,9 +5,11 @@ import com.dynamicdoers.hwapp.service.StudentService;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.MediaType;
+import org.springframework.http.*;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.io.File;
 import java.io.IOException;
@@ -33,6 +35,23 @@ public class StudentController {
     @GetMapping(path = "/{id}")
     public Optional<Student> getStudent(@PathVariable(name = "id") int id){
         return studentService.getStudent(id);
+    }
+
+    @GetMapping(path = "/{id}/getImage")
+    public ResponseEntity<byte[]> getStudentWithImage(@PathVariable(name = "id") int id) throws IOException {
+        Optional<Student> optionalStudent = studentService.getStudent(id);
+
+        if(optionalStudent.isPresent()){
+            Student currStudent = optionalStudent.get();
+            String filename = String.format("%d_%s.jpg", currStudent.id, currStudent.name);
+            File imageFile = new File("./src/main/resources/static/student_images/" + filename);
+            HttpHeaders httpHeaders = new HttpHeaders();
+            httpHeaders.setContentType(MediaType.IMAGE_JPEG);
+            return new ResponseEntity<>(Files.readAllBytes(imageFile.toPath()), httpHeaders, HttpStatus.OK);
+        }
+        else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Student with ID %d, not found !", id));
+        }
     }
 
     @PostMapping
