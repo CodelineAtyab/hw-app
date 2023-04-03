@@ -19,6 +19,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api/students")
+@PreAuthorize("hasRole('ADMIN')")
 public class StudentController {
 
     public StudentController(int id,
@@ -28,7 +29,7 @@ public class StudentController {
     }
 
     @GetMapping
-    public List<Student> getStudents(){
+    public List<Student> getStudents(HttpRequest httpRequest){
         return studentService.getAllStudents();
     }
 
