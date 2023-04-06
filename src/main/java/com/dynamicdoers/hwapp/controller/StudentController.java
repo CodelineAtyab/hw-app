@@ -14,8 +14,10 @@ import org.springframework.web.server.ResponseStatusException;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 @RestController
 @RequestMapping(path = "/api/students")
@@ -29,7 +31,8 @@ public class StudentController {
     }
 
     @GetMapping
-    public List<Student> getStudents(HttpRequest httpRequest){
+    public List<Student> getStudents(Principal principal){
+        System.out.println("**************** " + principal.toString());
         return studentService.getAllStudents();
     }
 
