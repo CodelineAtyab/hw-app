@@ -2,6 +2,7 @@ package com.dynamicdoers.hwapp.controller;
 
 import com.dynamicdoers.hwapp.model.Student;
 import com.dynamicdoers.hwapp.service.StudentService;
+import jakarta.validation.Valid;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -59,7 +60,7 @@ public class StudentController {
     }
 
     @PostMapping
-    public Student createStudent(@RequestBody Student currStudent){
+    public Student createStudent(@Valid @RequestBody Student currStudent){
         studentService.createStudent(currStudent);
         return currStudent;
     }

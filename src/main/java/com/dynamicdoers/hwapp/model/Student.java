@@ -13,6 +13,7 @@ public class Student {
     @Column
     public String name;
     @Column
+    @Pattern(regexp = "^[a-z|A-Z|.]+@[a-z|A-Z]+\\.[a-z|A-Z]{2,}$")
     public String email;
 
     @Column
