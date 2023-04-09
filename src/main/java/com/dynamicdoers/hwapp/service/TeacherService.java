@@ -11,7 +11,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 @Service
 public class TeacherService {
-    private final List<Teacher> listOfTeacher = new CopyOnWriteArrayList<>();
     @Autowired
     private TeacherRepository teacherRepository;
 

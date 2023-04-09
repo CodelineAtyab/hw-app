@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     public int id;
 
     @Column
@@ -15,5 +16,8 @@ public class Teacher {
     public String email;
     @Column
     public long hiredAt;
+
+    @OneToOne(mappedBy = "mentor")
+    public Course course;
 
 }
