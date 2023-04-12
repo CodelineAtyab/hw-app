@@ -1,5 +1,6 @@
 package com.dynamicdoers.hwapp.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
 
@@ -22,5 +23,6 @@ public class Student {
     public String imageName;
 
     @ManyToMany(mappedBy = "enrolledStudents")
+    @JsonIgnore
     public Set<Course> registeredCourses;
 }
