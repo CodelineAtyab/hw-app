@@ -3,6 +3,8 @@ package com.dynamicdoers.hwapp.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "student")
 public class Student {
@@ -19,4 +21,6 @@ public class Student {
     @Column
     public String imageName;
 
+    @ManyToMany(mappedBy = "enrolledStudents")
+    public Set<Course> registeredCourses;
 }

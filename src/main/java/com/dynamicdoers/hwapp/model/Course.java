@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 public class Course {
     @Id
@@ -23,4 +25,12 @@ public class Course {
     public Integer getMentorId(){
         return mentor != null ? mentor.id : null;
     }
+
+    @ManyToMany
+    @JoinTable(
+            name = "course_student",
+            joinColumns = @JoinColumn(name = "course_id"),
+            inverseJoinColumns = @JoinColumn(name = "student_id")
+    )
+    public Set<Student> enrolledStudents;
 }

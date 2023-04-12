@@ -29,6 +29,7 @@ public class CourseService {
         Optional<Course> optionalCourse = courseRepository.findById(id);
         optionalCourse.ifPresent((course)->{
             course.name = upToDateCourse.name;
+            course.enrolledStudents = upToDateCourse.enrolledStudents;
             courseRepository.save(course);
         });
         return optionalCourse;
